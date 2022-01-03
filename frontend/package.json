@@ -8,6 +8,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
     "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",
@@ -16,6 +17,7 @@
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@types/materialize-css": "^1.0.11",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
