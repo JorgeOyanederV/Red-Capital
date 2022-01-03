@@ -3,10 +3,10 @@
     <div class="nav-wrapper">
       <img src="https://www.khipu.com/wp-content/uploads/2021/09/Red-Capital.png" alt="image" class="vue-logo">
       <ul id="nav-mobile" class="right hide-on-small-only">
-        <li><router-link to='/'>INICIO</router-link></li>
+        <li><router-link to='/home'>INICIO</router-link></li>
         <li><router-link to='/about'>QUIENES SOMOS</router-link></li>
-        <li><router-link to='/programas'>PROGRAMAS</router-link></li>
-        <li><router-link to='/como'>COMO FUNCIONA</router-link></li>
+        <li><router-link to='/post'>PROGRAMAS</router-link></li>
+        <li><router-link to='/how'>COMO FUNCIONA</router-link></li>
       </ul>
     </div>
   </nav>

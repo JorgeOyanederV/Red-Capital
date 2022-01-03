@@ -1,9 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home'
-import About from '../views/About'
-import Programs from '../views/Programs'
-import How from '../views/How'
-import NotFoundPage from '../views/NotFoundPage'
 
 const routes = [
   {
@@ -17,17 +12,17 @@ const routes = [
     component: () => import(/* webpackChunkName: "About" */ '@/views/About')
   },
   {
-    path: '/programas',
-    name: 'Programs',
-    component: () => import(/* webpackChunkName: "Programs" */ '@/views/Programs')
+    path: '/post',
+    name: 'Post',
+    component: () => import(/* webpackChunkName: "Programs" */ '@/views/Post')
   },
   {
-    path: '/como',
+    path: '/how',
     name: 'How',
     component: () => import(/* webpackChunkName: "How" */ '@/views/How')
   }, {
     path: '/',
-    redirect: () => import(/* webpackChunkName: "Home" */ '@/views/Home')
+    component: () => import(/* webpackChunkName: "Home" */ '@/views/Home')
   },
   {
     path: '/:pathMatch(.*)*',
