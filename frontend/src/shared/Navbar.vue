@@ -1,15 +1,15 @@
 <template>
-  <div>
-     <div>
-        <img src='#' alt='company name'>
-     </div>
-     <div>
-        <router-link to='/about'>INICIO</router-link>
-        <router-link to='/'>QUIENES SOMOS</router-link>
-        <router-link to='/'>PROGRAMAS</router-link>
-        <router-link to='/'>COMO FUNCIONA</router-link>
-     </div>
-  </div>
+   <nav>
+    <div class="nav-wrapper">
+      <img src="https://www.khipu.com/wp-content/uploads/2021/09/Red-Capital.png" alt="image" class="vue-logo">
+      <ul id="nav-mobile" class="right hide-on-small-only">
+        <li><router-link to='/'>INICIO</router-link></li>
+        <li><router-link to='/about'>QUIENES SOMOS</router-link></li>
+        <li><router-link to='/programas'>PROGRAMAS</router-link></li>
+        <li><router-link to='/como'>COMO FUNCIONA</router-link></li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -18,6 +18,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.vue-logo{
+   float:left;
+   height: 100%;
+   margin-left: 5px;
+}
 </style>
