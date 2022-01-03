@@ -1,10 +1,24 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+<div>
+  <Navbar/>
+  <botton class="btn red">hola</botton>
+</div>
+
 </template>
+
+<script>
+import  Navbar  from './shared/Navbar'
+import M from 'materialize-css'
+
+export default {
+  components:{
+    Navbar
+  },
+  mounted () {
+    M.AutoInit()
+},
+}
+</script>
 
 <style>
 #app {
