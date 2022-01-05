@@ -31,7 +31,7 @@ export default createStore({
     async getPost() {
       const min = 0
       const maxAmount = 15000000
-      const maxStatus = 1
+      const maxStatus = 2
       const posts = await postApi()
       const postModified = posts.map((post) => ({
         ...post,
