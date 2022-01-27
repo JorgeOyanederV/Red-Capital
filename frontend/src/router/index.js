@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import createStore from '../store/index.js' // CONSULTAR COMO LLAMAR AL STORE DESDE UN ARCHIVO JS CUALQUIERA
 
 const routes = [
   {
@@ -14,7 +15,11 @@ const routes = [
   {
     path: '/post',
     name: 'Post',
-    component: () => import(/* webpackChunkName: "Programs" */ '@/views/Post')
+    component: () => import(/* webpackChunkName: "Programs" */ '@/views/Post'),
+    beforeEnter: (to, from) => {
+      if (createStore.state.remember_me) return true
+      return false
+    },
   },
   {
     path: '/how',
