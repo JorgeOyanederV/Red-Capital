@@ -8,24 +8,26 @@ export default createStore({
     remember_me: false
   },
   mutations: {
+    // Save in the store the User's rut
     loggin(state, { rut }) {
       state.rut = rut
       state.remember_me = true
     }
   },
   actions: {
+    // Verify and log the user
     async loggin(context) {
       const remember_me = '1'
       const [rut, password] = arguments[1]
       const { data } = await authApi([rut, password, remember_me])
       if (data.message === "success login") {
-        console.log("we did it");
+        // call to mutation loggin for register
         this.commit('loggin', {
           rut
         })
-        return true
+        //redireccionar a otra pagina
       } else {
-        return data.message
+        alert('Contraseña incorrecta')
       }
     },
     async getPost() {
@@ -41,6 +43,4 @@ export default createStore({
       return postModified
     },
   },
-  modules: {
-  }
 })
